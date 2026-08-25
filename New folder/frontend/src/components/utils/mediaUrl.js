@@ -1,24 +1,33 @@
-// const API_BASE_URL = ' http://localhost:8000/'
-
-// export const getMediaUrl =(mediaPath) => {
-//     if (!mediaPath) return null
 
 
-//     if (mediaPath.startsWith('http://') || mediaPath.startsWith('https://')){
-//         return mediaPath
-//     }
+// const API_ROOT = (
+//   import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api'
+// ).replace(/\/api\/?$/, '');
 
-//     if (mediaPath.startsWith('/')){
-//         return `${API_BASE_URL}${mediaPath}`
-//     }
-    
-    
-//     return `${API_BASE_URL}/media/${mediaPath}`
-// }
+// export const getMediaUrl = (mediaPath) => {
+//   if (!mediaPath) return null;
 
-const API_ROOT = (
-  import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api'
-).replace(/\/api\/?$/, '');
+//   if (
+//     mediaPath.startsWith('http://') ||
+//     mediaPath.startsWith('https://')
+//   ) {
+//     return mediaPath;
+//   }
+
+//   if (mediaPath.startsWith('/')) {
+//     return `${API_ROOT}${mediaPath}`;
+//   }
+
+//   return `${API_ROOT}/media/${mediaPath}`;
+// };
+
+
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+
+const getMediaBaseUrl = () => {
+  return API_BASE_URL.replace(/\/api\/?$/, '');
+};
 
 export const getMediaUrl = (mediaPath) => {
   if (!mediaPath) return null;
@@ -30,9 +39,11 @@ export const getMediaUrl = (mediaPath) => {
     return mediaPath;
   }
 
+  const baseUrl = getMediaBaseUrl();
+
   if (mediaPath.startsWith('/')) {
-    return `${API_ROOT}${mediaPath}`;
+    return `${baseUrl}${mediaPath}`;
   }
 
-  return `${API_ROOT}/media/${mediaPath}`;
+  return `${baseUrl}/media/${mediaPath}`;
 };

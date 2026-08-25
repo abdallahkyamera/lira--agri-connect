@@ -9,6 +9,7 @@ import PricePrediction from '../AI/PricePrediction';
 // import WeatherWidget from '../Weather/WeatherWidget';
 import Footer from '../Layout/Footer';
 import { getMediaUrl } from '../utils/mediaUrl';
+import api from '../../services/api';
 
 
 
@@ -65,22 +66,16 @@ const AdminDashboard = () => {
     setShowForm(true);
   };
 
+
   const handleDelete = async (id) => {
   if (window.confirm('Are you sure you want to delete this produce?')) {
     try {
-      await deleteProduce(id);
-
+      await api.delete(`/produces/${id}/`);
       alert('Deleted successfully');
-
-      await fetchProduces();
+      fetchProduces();
     } catch (error) {
-      console.error('Delete error:', error);
-
-      alert(
-        error.response?.data?.detail ||
-        error.response?.data?.error ||
-        'Failed to delete produce'
-      );
+      console.error(error);
+      alert(error.response?.data?.error || 'Delete failed');
     }
   }
 };
