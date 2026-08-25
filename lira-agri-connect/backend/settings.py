@@ -37,7 +37,7 @@ SECRET_KEY = 'django-insecure--1fg(ubwjv!q%(!^p^@41^@^b+cv4a@48mop8+38aqbi5x0@)-
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [
-    "https://lira-agri-connect.onrender.com",
+ "lira-agri-connect.onrender.com",
     "localhost",
     "127.0.0.1",
 ]
