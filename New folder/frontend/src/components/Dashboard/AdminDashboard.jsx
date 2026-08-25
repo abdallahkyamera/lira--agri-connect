@@ -1,12 +1,16 @@
 
 import React, { useState, useEffect } from 'react';
-import { getProduces, createProduce } from '../../services/api';
+import {
+  getProduces,
+  createProduce,
+  deleteProduce
+} from '../../services/api';
 import PricePrediction from '../AI/PricePrediction';
 // import WeatherWidget from '../Weather/WeatherWidget';
 import Footer from '../Layout/Footer';
 import { getMediaUrl } from '../utils/mediaUrl';
 
-import axios from 'axios';
+
 
 
 const AdminDashboard = () => {
@@ -62,17 +66,23 @@ const AdminDashboard = () => {
   };
 
   const handleDelete = async (id) => {
-    if (window.confirm('Are you sure you want to delete this produce?')) {
-      try{
-        axios.delete(`http://127.0.0.1:8000/api/produce/${id}/`);
-        alert("Deleted successfully");
-      fetchProduces();
-      }catch (error) {
-      console.error(error);
-      alert(error);
-       }
-  }
+  if (window.confirm('Are you sure you want to delete this produce?')) {
+    try {
+      await deleteProduce(id);
 
+      alert('Deleted successfully');
+
+      await fetchProduces();
+    } catch (error) {
+      console.error('Delete error:', error);
+
+      alert(
+        error.response?.data?.detail ||
+        error.response?.data?.error ||
+        'Failed to delete produce'
+      );
+    }
+  }
 };
       
    
