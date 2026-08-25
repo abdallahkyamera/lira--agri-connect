@@ -37,7 +37,7 @@ SECRET_KEY = 'django-insecure--1fg(ubwjv!q%(!^p^@41^@^b+cv4a@48mop8+38aqbi5x0@)-
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [
-    ".onrender.com",
+    "https://lira-agri-connect.onrender.com",
     "localhost",
     "127.0.0.1",
 ]
@@ -77,7 +77,14 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://lira-agri-connect-1.onrender.com",
 ]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://lira-agri-connect-1.onrender.com",
+]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
