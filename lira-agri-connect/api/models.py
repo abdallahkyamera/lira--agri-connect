@@ -21,7 +21,7 @@ class CustomUser(AbstractUser):
     location = models.CharField(max_length=100, blank=False)
 
     # New fields for verification
-    national_id = models.CharField(max_length=50, unique=True, blank=False, null=True)
+    national_id = models.CharField(max_length=50, unique=True, blank=False,)
     trade_license = models.CharField(max_length=50,  blank=True, null=True)
     is_verified = models.BooleanField(default=False)
 
