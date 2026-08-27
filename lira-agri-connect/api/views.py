@@ -13,6 +13,12 @@ from .serializers import RegisterSerializer, ProduceSerializer
 
 from .models import Produce
 
+from rest_framework.views import APIView
+
+from rest_framework import status
+
+from django.contrib.auth import get_user_model
+
 
 
 
@@ -212,5 +218,122 @@ class PredictPriceView(APIView):
                 "bullish" if supply_count < 5 else "bearish"
         })
 
+
+
+User = get_user_model()
+
+
+class AdminUsersView(APIView):
+    """
+    Return all users for the admin dashboard.
+    Only administrators can access this endpoint.
+    """
+
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+
+        # Only admins can view all users
+        if request.user.role != 'admin':
+            return Response(
+                {
+                    'error': 'Administrator access required.'
+                },
+                status=status.HTTP_403_FORBIDDEN
+            )
+
+        users = User.objects.all().order_by('-id')
+
+        data = []
+
+        for user in users:
+            data.append({
+                'id': user.id,
+                'username': user.username,
+                'email': user.email,
+                'role': user.role,
+                'is_active': user.is_active,
+            })
+
+        return Response(data)
+
+
+class ChangeUserRoleView(APIView):
+    """
+    Allows an administrator to change another user's role.
+    """
+
+    permission_classes = [IsAuthenticated]
+
+    def patch(self, request, user_id):
+
+        # Make sure the person making the request is an admin
+        if request.user.role != 'admin':
+            return Response(
+                {
+                    'error': 'Administrator access required.'
+                },
+                status=status.HTTP_403_FORBIDDEN
+            )
+
+        # Find target user
+        try:
+            user = User.objects.get(id=user_id)
+
+        except User.DoesNotExist:
+            return Response(
+                {
+                    'error': 'User not found.'
+                },
+                status=status.HTTP_404_NOT_FOUND
+            )
+
+        # Get requested role
+        new_role = request.data.get('role')
+
+        # Only allow valid roles
+        valid_roles = [
+            'farmer',
+            'buyer',
+            'admin'
+        ]
+
+        if new_role not in valid_roles:
+            return Response(
+                {
+                    'error': 'Invalid role.',
+                    'allowed_roles': valid_roles
+                },
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # Prevent an admin from accidentally removing
+        # their own administrator privileges
+        if user.id == request.user.id and new_role != 'admin':
+            return Response(
+                {
+                    'error':
+                    'You cannot remove your own admin privileges.'
+                },
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # Change role
+        user.role = new_role
+        user.save(update_fields=['role'])
+
+        return Response(
+            {
+                'message': 'User role updated successfully.',
+                'user': {
+                    'id': user.id,
+                    'username': user.username,
+                    'email': user.email,
+                    'role': user.role,
+                    'is_active': user.is_active,
+                }
+            },
+            status=status.HTTP_200_OK
+        )
 
 

@@ -16,7 +16,8 @@ class CustomUser(AbstractUser):
         ('admin', 'Admin'),
     )
 
-    role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='buyer')
+
+    role = models.CharField(max_length=20, choices=ROLE_CHOICES, default='farmer')
     phone = models.CharField(max_length=20, blank=False)
     location = models.CharField(max_length=100, blank=False)
 

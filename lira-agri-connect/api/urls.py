@@ -9,6 +9,12 @@ from .views import (
     PredictPriceView,
 )
 
+from .views import (
+    AdminUsersView,
+    ChangeUserRoleView,
+)
+
+
 urlpatterns = [
     # Authentication
     path('register/', register_view, name='register'),
@@ -26,6 +32,19 @@ urlpatterns = [
     PredictPriceView.as_view(),
     name="predict-price"
 ),
+
+
+path(
+        'admin/users/',
+        AdminUsersView.as_view(),
+        name='admin-users'
+    ),
+
+    path(
+        'admin/users/<int:user_id>/role/',
+        ChangeUserRoleView.as_view(),
+        name='change-user-role'
+    ),
 
 ]
 
