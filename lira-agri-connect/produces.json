@@ -1,0 +1,562 @@
+[
+{
+  "model": "api.produce",
+  "pk": 2,
+  "fields": {
+    "farmer": 2,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "8000.00",
+    "unit": "kg",
+    "price": "700.00",
+    "description": "fresh from gardensssssssss",
+    "image": "produces/soya_beans_tQAhk8J.JPG",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "ulago",
+    "created_at": "2026-05-17T08:46:10.023Z",
+    "updated_at": "2026-06-21T10:54:27.065Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 3,
+  "fields": {
+    "farmer": 2,
+    "name": "soya",
+    "category": "Vegetables",
+    "quantity": "900.00",
+    "unit": "kg",
+    "price": "880.00",
+    "description": "nice",
+    "image": "produces/gnuts_gIxHNae.JPG",
+    "status": "available",
+    "district": "",
+    "sub_county": "",
+    "village": "",
+    "created_at": "2026-05-26T15:13:44.235Z",
+    "updated_at": "2026-06-21T11:00:18.654Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 6,
+  "fields": {
+    "farmer": 2,
+    "name": "muyembe",
+    "category": "Fruits",
+    "quantity": "100.00",
+    "unit": "each",
+    "price": "100.00",
+    "description": "fresh",
+    "image": "produces/WhatsApp_Image_2026-06-11_at_21.45.18_3.jpeg",
+    "status": "available",
+    "district": "apac",
+    "sub_county": "uganda",
+    "village": "bororo",
+    "created_at": "2026-06-01T18:43:02.578Z",
+    "updated_at": "2026-06-16T10:18:46.871Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 7,
+  "fields": {
+    "farmer": 2,
+    "name": "cassava",
+    "category": "Legumes",
+    "quantity": "110.00",
+    "unit": "kg",
+    "price": "2000.00",
+    "description": "fresh",
+    "image": "",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "agwete",
+    "created_at": "2026-06-01T18:45:07.814Z",
+    "updated_at": "2026-06-01T18:45:54.037Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 8,
+  "fields": {
+    "farmer": 6,
+    "name": "G.O.A.T",
+    "category": "Livestock",
+    "quantity": "1.00",
+    "unit": "GOAT",
+    "price": "1.00",
+    "description": "MEATS",
+    "image": "produces/WhatsApp_Image_2026-06-11_at_21.45.30_2.jpeg",
+    "status": "available",
+    "district": "LIRA",
+    "sub_county": "LIRA",
+    "village": "LIRA",
+    "created_at": "2026-06-01T21:48:41.733Z",
+    "updated_at": "2026-06-16T10:19:10.321Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 9,
+  "fields": {
+    "farmer": 2,
+    "name": "FRESH TOMATOES",
+    "category": "Fruits",
+    "quantity": "200.00",
+    "unit": "BASKETS",
+    "price": "20000.00",
+    "description": "GARDEN FRESH",
+    "image": "produces/01_gettyimages-168324851_resized.jpg",
+    "status": "available",
+    "district": "LIRA",
+    "sub_county": "PAK",
+    "village": "ULAGO",
+    "created_at": "2026-06-01T23:16:17.598Z",
+    "updated_at": "2026-06-01T23:17:34.602Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 10,
+  "fields": {
+    "farmer": 11,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "20.00",
+    "unit": "kg",
+    "price": "3000.00",
+    "description": "fresh",
+    "image": "",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "ayere",
+    "created_at": "2026-06-02T17:51:33.716Z",
+    "updated_at": "2026-06-03T23:12:51.610Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 11,
+  "fields": {
+    "farmer": 9,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "10000.00",
+    "unit": "kg",
+    "price": "3000.00",
+    "description": "dry",
+    "image": "produces/WhatsApp_Image_2026-06-11_at_21.45.30.jpeg",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "ayere",
+    "created_at": "2026-06-02T17:54:22.199Z",
+    "updated_at": "2026-06-16T10:17:32.871Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 12,
+  "fields": {
+    "farmer": 2,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "7000.00",
+    "unit": "1000kg",
+    "price": "1000000.00",
+    "description": "fresh",
+    "image": "produces/soya_beans.JPG",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-02T17:59:22.471Z",
+    "updated_at": "2026-06-21T09:40:25.348Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 13,
+  "fields": {
+    "farmer": 11,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "2000.00",
+    "unit": "kg",
+    "price": "2000.00",
+    "description": "dry",
+    "image": "",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-03T22:56:06.206Z",
+    "updated_at": "2026-06-03T22:56:06.206Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 14,
+  "fields": {
+    "farmer": 2,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "6000.00",
+    "unit": "kg",
+    "price": "3000.00",
+    "description": "fresh",
+    "image": "",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-03T23:10:19.371Z",
+    "updated_at": "2026-06-03T23:10:19.371Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 15,
+  "fields": {
+    "farmer": 2,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "9000.00",
+    "unit": "kg",
+    "price": "3000.00",
+    "description": "fresh",
+    "image": "",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "bar",
+    "village": "bar",
+    "created_at": "2026-06-03T23:15:50.718Z",
+    "updated_at": "2026-06-04T08:44:09.728Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 16,
+  "fields": {
+    "farmer": 11,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "1778876.00",
+    "unit": "kg",
+    "price": "2500.00",
+    "description": "dry",
+    "image": "",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "teso ba",
+    "village": "bar",
+    "created_at": "2026-06-03T23:23:53.987Z",
+    "updated_at": "2026-06-03T23:23:53.987Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 17,
+  "fields": {
+    "farmer": 8,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "4567.00",
+    "unit": "kg",
+    "price": "3200.00",
+    "description": "fresh",
+    "image": "",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "aki bua",
+    "village": "bua",
+    "created_at": "2026-06-03T23:42:35.860Z",
+    "updated_at": "2026-06-03T23:42:35.860Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 18,
+  "fields": {
+    "farmer": 2,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "1000.00",
+    "unit": "kg",
+    "price": "3500.00",
+    "description": "dry",
+    "image": "",
+    "status": "available",
+    "district": "ober",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-04T00:07:11.331Z",
+    "updated_at": "2026-06-04T23:16:57.324Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 19,
+  "fields": {
+    "farmer": 2,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "2000.00",
+    "unit": "kg",
+    "price": "3200.00",
+    "description": "fresh",
+    "image": "",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "yar",
+    "village": "obar",
+    "created_at": "2026-06-04T14:13:49.609Z",
+    "updated_at": "2026-06-04T14:13:49.609Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 20,
+  "fields": {
+    "farmer": 12,
+    "name": "maize",
+    "category": "Grains",
+    "quantity": "2000.00",
+    "unit": "kg",
+    "price": "1199.00",
+    "description": "dry",
+    "image": "produces/maize_1.JPG",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-04T14:45:31.058Z",
+    "updated_at": "2026-06-21T09:45:42.679Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 21,
+  "fields": {
+    "farmer": 2,
+    "name": "maize",
+    "category": "Grains",
+    "quantity": "1000.00",
+    "unit": "kg",
+    "price": "22000.00",
+    "description": "dry",
+    "image": "produces/maize.JPG",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-04T18:41:56.874Z",
+    "updated_at": "2026-06-21T09:45:10.736Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 22,
+  "fields": {
+    "farmer": 2,
+    "name": "TOMATOES",
+    "category": "Fruits",
+    "quantity": "500.00",
+    "unit": "kg",
+    "price": "5000.00",
+    "description": "fresh",
+    "image": "produces/04_gettyimages_508099270_super_resized.jpg",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-04T18:49:14.617Z",
+    "updated_at": "2026-06-16T10:16:37.553Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 23,
+  "fields": {
+    "farmer": 2,
+    "name": "maize",
+    "category": "Vegetables",
+    "quantity": "20000.00",
+    "unit": "kg",
+    "price": "2200.00",
+    "description": "fresh",
+    "image": "",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-05T07:49:46.560Z",
+    "updated_at": "2026-06-05T07:49:46.560Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 24,
+  "fields": {
+    "farmer": 2,
+    "name": "tomatoes",
+    "category": "Vegetables",
+    "quantity": "6000.00",
+    "unit": "kg",
+    "price": "5653.00",
+    "description": "fresh",
+    "image": "",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-05T10:29:57.065Z",
+    "updated_at": "2026-06-05T10:29:57.066Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 25,
+  "fields": {
+    "farmer": 2,
+    "name": "beans",
+    "category": "Vegetables",
+    "quantity": "2000.00",
+    "unit": "kg",
+    "price": "6000.00",
+    "description": "hshdjdkk",
+    "image": "produces/WhatsApp_Image_2026-06-11_at_21.45.18_1.jpeg",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "barapwo",
+    "created_at": "2026-06-05T10:31:38.194Z",
+    "updated_at": "2026-06-16T10:17:15.762Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 26,
+  "fields": {
+    "farmer": 2,
+    "name": "matooke",
+    "category": "Fruits",
+    "quantity": "100.00",
+    "unit": "bantches",
+    "price": "29997.00",
+    "description": "good",
+    "image": "produces/WhatsApp_Image_2026-06-11_at_21.44.30.jpeg",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-16T08:19:27.816Z",
+    "updated_at": "2026-06-16T08:26:31.378Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 27,
+  "fields": {
+    "farmer": 2,
+    "name": "nuts",
+    "category": "Tubers",
+    "quantity": "100.00",
+    "unit": "kg",
+    "price": "4500.00",
+    "description": "fresh",
+    "image": "produces/gnuts.JPG",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-16T10:31:49.783Z",
+    "updated_at": "2026-06-21T10:49:55.548Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 28,
+  "fields": {
+    "farmer": 2,
+    "name": "irish",
+    "category": "Tubers",
+    "quantity": "34.00",
+    "unit": "kg",
+    "price": "1300.00",
+    "description": "good quality",
+    "image": "produces/gnuts_3.JPG",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "erute",
+    "village": "erute",
+    "created_at": "2026-06-16T10:51:08.438Z",
+    "updated_at": "2026-06-21T10:48:14.820Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 29,
+  "fields": {
+    "farmer": 2,
+    "name": "potatoes",
+    "category": "Tubers",
+    "quantity": "345678.00",
+    "unit": "kg",
+    "price": "345678.00",
+    "description": "wertyui",
+    "image": "produces/potatoes.JPG",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lita",
+    "created_at": "2026-06-16T10:54:33.137Z",
+    "updated_at": "2026-06-21T09:43:47.506Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 30,
+  "fields": {
+    "farmer": 2,
+    "name": "coffee",
+    "category": "Vegetables",
+    "quantity": "1500.00",
+    "unit": "kg",
+    "price": "1497.00",
+    "description": "good",
+    "image": "produces/coffeee.JPG",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "lira",
+    "village": "lira",
+    "created_at": "2026-06-16T11:01:57.809Z",
+    "updated_at": "2026-06-21T10:59:05.125Z"
+  }
+},
+{
+  "model": "api.produce",
+  "pk": 31,
+  "fields": {
+    "farmer": 2,
+    "name": "maize",
+    "category": "Vegetables",
+    "quantity": "4787.00",
+    "unit": "kg",
+    "price": "67889.00",
+    "description": "dry",
+    "image": "produces/maize_2.JPG",
+    "status": "available",
+    "district": "lira",
+    "sub_county": "erute",
+    "village": "erute",
+    "created_at": "2026-06-16T11:09:35.793Z",
+    "updated_at": "2026-06-21T09:56:22.329Z"
+  }
+}
+]
