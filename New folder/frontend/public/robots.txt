@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lira-agri-connect-1.onrender.comsitemap.xml
