@@ -30,11 +30,19 @@ class RegisterSerializer(serializers.ModelSerializer):
         ]
 
     def create(self, validated_data):
-        # Only farmers should provide national_id and trade_license
-        if validated_data.get('role') == 'farmer':
-            if not validated_data.get('national_id') or not validated_data.get('trade_license'):
+        role = validated_data.get('role')
+
+        # Farmers and buyers must provide National ID
+        if role in ['farmer', 'buyer']:
+            if not validated_data.get('national_id'):
                 raise serializers.ValidationError({
-                    "national_id": "National ID is required for farmers",
+                    "national_id": "National ID is required for farmers and buyers"
+                })
+
+        # Only farmers must provide Trade License
+        if role == 'farmer':
+            if not validated_data.get('trade_license'):
+                raise serializers.ValidationError({
                     "trade_license": "Trade License is required for farmers"
                 })
 
@@ -42,14 +50,15 @@ class RegisterSerializer(serializers.ModelSerializer):
             username=validated_data['username'],
             email=validated_data.get('email', ''),
             password=validated_data['password'],
-            role=validated_data.get('role', 'buyer'),
+            role=role or 'buyer',
             phone=validated_data.get('phone', ''),
             location=validated_data.get('location', ''),
             first_name=validated_data.get('first_name', ''),
             last_name=validated_data.get('last_name', ''),
             national_id=validated_data.get('national_id'),
-            trade_license=validated_data.get('trade_license'),
+            trade_license=validated_data.get('trade_license') if role == 'farmer' else None,
         )
+
         return user
 
 
