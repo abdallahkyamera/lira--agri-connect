@@ -64,3 +64,4 @@ urllib3==2.7.0
 websockets==16.1.1
 whitenoise==6.11.0
 zope.interface==8.6
+python-dotenv==1.1.1
