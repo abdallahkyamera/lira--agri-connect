@@ -72,6 +72,8 @@ const FarmerDashboard = () => {
       data.append('imagesToDelete', JSON.stringify(imagesToDelete));
     }
 
+    
+
     try {
       if (editingProduce) {
         await updateProduce(editingProduce.id, data);

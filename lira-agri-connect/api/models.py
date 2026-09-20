@@ -17,7 +17,8 @@ class CustomUser(AbstractUser):
     location = models.CharField(max_length=100, blank=False)
 
     # New fields for verification
-    national_id = models.CharField(max_length=50, unique=True, blank=False,)
+    national_id = models.CharField(max_length=50, unique=True, blank=True, null=True)
+  
     trade_license = models.CharField(max_length=50,  blank=True, null=True)
     is_verified = models.BooleanField(default=False)
 
@@ -47,7 +48,10 @@ class Produce(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     
     description = models.TextField(blank=True)
-    image = models.ImageField(upload_to='produces/', blank=True, null=True)
+    image = models.ImageField(
+    upload_to='produces/',
+    blank=True,
+    null=True)
     
     status = models.CharField(max_length=20, default='available', choices=[
         ('available', 'Available'),
