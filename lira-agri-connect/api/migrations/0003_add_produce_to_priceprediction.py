@@ -1,5 +1,4 @@
-from django.db import migrations, models
-import django.db.models.deletion
+from django.db import migrations
 
 
 class Migration(migrations.Migration):
@@ -9,12 +8,8 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='priceprediction',
-            name='produce',
-            field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE,
-                to='api.produce',
-            ),
+        migrations.RunSQL(
+            sql=migrations.RunSQL.noop,
+            reverse_sql=migrations.RunSQL.noop,
         ),
     ]
